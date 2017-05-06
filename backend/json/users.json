@@ -1,0 +1,33 @@
+{
+   "user1" : {
+      "name" : "Mirco",
+      "password" : "password",
+      "team" : "aquaninja",
+      "id": 1
+   },
+   "user2" : {
+      "name" : "Suzanna",
+      "password" : "password",
+      "team" : "aquaninja",
+      "id": 2
+   },
+   "user3" : {
+      "name" : "Mario",
+      "password" : "password",
+      "team" : "aquaninja",
+      "id": 3
+   },
+   "user4" : {
+      "name" : "Ivan",
+      "password" : "password",
+      "team" : "aquaninja",
+      "id": 4
+    },
+   "user5" : {
+      "name" : "Verena",
+      "password" : "password",
+      "team" : "aquaninja",
+      "id": 5
+  }
+}
+
