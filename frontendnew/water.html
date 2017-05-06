@@ -1,0 +1,210 @@
+ <!DOCTYPE html>
+
+<html lang="en">
+
+<head>
+
+  <title>Bootstrap Example</title>
+
+  <meta charset="utf-8">
+
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.0/jquery.min.js"></script>
+
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+
+</head>
+
+<body>
+
+
+
+<div class="container">
+
+
+  <div class="container-fluid">
+
+    <div class="row">
+
+    
+      <div class="col-md-9">
+	
+	
+	<div id="score">ello</div>
+	</div>
+	</div>
+ <div class="row">
+
+      <div class="col-md-12">
+		<svg class="loading" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+			 width="574.558px" height="800px" viewBox="0 0 574.558 120" enable-background="new 0 0 574.558 120" xml:space="preserve">
+		  <defs>
+			<pattern id="water" width=".25" height="1.1" patternContentUnits="objectBoundingBox">
+			  <path fill="#40a4df" d="M0.25,1H0c0,0,0-0.659,0-0.916c0.083-0.303,0.158,0.334,0.25,0C0.25,0.327,0.25,1,0.25,1z"/>
+			</pattern>
+		
+		<rect x="0" y="0" width="100%" height="440" fill="#EFEFEF" stroke="grey" stroke-width="5" id="text" />
+			<mask id="text-mask">
+			  <use x="0" y="0" xlink:href="#text" opacity="1" fill="#ffffff"/>
+			</mask>
+		  </defs>
+			  <use x="0" y="0" xlink:href="#text" fill="#EEE"/>
+			
+		  <rect class="water-fill" mask="url(#text-mask)" fill="url(#water)" x="0" y="0" width="1600" height="440"/>
+				<line id="lineplayer1" x1="0" y1="200" x2="574" y2="200" style="stroke:rgb(155,155,155);stroke-width:2" />
+			  
+			  <line id="lineplayer2" x1="0" y1="100" x2="574" y2="100" style="stroke:rgb(155,155,155);stroke-width:2" />
+			  
+			  <line id="lineplayer3" x1="0" y1="50" x2="574" y2="50" style="stroke:rgb(155,155,155);stroke-width:2" />
+		  
+		</svg>
+
+      
+      </div>
+
+    </div>
+
+  </div> 
+
+ </div>
+
+<div id="playerdiv" class="player1">HALLOOOO</div>
+
+
+
+<div id="playerdiv" class="player2">HALLOOOO</div>
+
+
+
+
+<div id="playerdiv" class="player3">HALLOOOO</div>
+
+
+
+
+<div id="playerdiv" class="you">you</div>
+
+
+
+</body>
+
+</html>
+
+<style>
+
+body {
+  background #fff
+  text-align center
+}
+.loading {
+  margin-top 20px
+}
+.player1 {
+	background-color:red;
+	position:fixed;
+	width:100px;
+	height:50px;
+}
+.player2 {
+	background-color:green;
+	position:fixed;
+	width:100px;
+	height:50px;
+}
+.player3 {
+	background-color:yellow;
+	position:fixed;
+	width:100px;
+	height:50px;
+}
+.you {
+	background-color:#40a4df;
+	position:fixed;
+	width:100px;
+	height:50px;
+}
+  
+  </style>
+ <script src="http://cdnjs.cloudflare.com/ajax/libs/gsap/1.18.0/TweenMax.min.js"></script>
+<link href='http://fonts.googleapis.com/css?family=Cabin+Condensed:700' rel='stylesheet' type='text/css'>
+
+ <script>
+ $( document ).ready(function() {
+    console.log( "ready!" );
+	//alert($("#lineplayer1").position().top);
+	z = parseInt($(".player1").width());
+	
+	 var counter = { var: 0 };
+ TweenMax.to(counter, 20, {
+      var: 85.15, 
+      onUpdate: function () {
+          console.log(Math.ceil(counter.var));
+		  
+          $("#score").html(counter.var);
+      },
+      ease:Circ.easeOut
+  });
+	
+	$(".player1").css("top",$("#lineplayer1").position().top + "px");
+	$(".player1").css("left",($("#lineplayer1").position().left - z) + "px");
+	 console.log( "ready1!" );
+	
+	//z = parseInt($("#lineplayer2").attr("x2"));
+	z = parseInt($(".player2").width());
+	
+	$(".player2").css("top",$("#lineplayer2").position().top + "px");
+	$(".player2").css("left",($("#lineplayer2").position().left - z) + "px");
+	 console.log( "ready3!" );
+	
+	z = parseInt($(".player3").width());
+	
+	$(".player3").css("top",$("#lineplayer3").position().top + "px");
+	$(".player3").css("left",($("#lineplayer3").position().left - z) + "px");
+	
+	
+	
+	z = parseInt($("#lineplayer2").attr("x2"));
+	
+	$(".you").css("top", "800px");
+	$(".you").css("left",($("#lineplayer3").position().left + z) + "px");
+});
+
+  document.addEventListener("DOMContentLoaded",function(){
+  var fill=document.querySelector(".water-fill");
+  var you=document.querySelector(".you");
+  TweenMax.fromTo(fill,1.1,{
+    attr:{
+      x:-400
+    }
+  },
+  {
+    attr:{
+      x:0,
+    },
+    repeat:-1,
+    ease:Linear.easeNone
+  });
+  
+  
+  TweenMax.to(you, 20, {top:"400px", repeat:0, yoyo:true, repeatDelay:0.5, ease:Linear.easeNone});
+  
+  TweenMax.fromTo(fill,20,{
+    attr:{
+      y:440,
+      height:0
+    },
+  },{
+    attr:{
+      y:0,
+      height:440
+    },
+    repeat:0,
+    yoyo:true,
+    ease:Linear.easeNone
+  });
+  
+});
+</script>

@@ -1,0 +1,103 @@
+.jumbotron {
+  background: #532F8C;
+  color: white;
+  padding-bottom: 80px; }
+  .jumbotron .btn-primary {
+    background: #845ac7;
+    border-color: #845ac7; }
+    .jumbotron .btn-primary:hover {
+      background: #7646c1; }
+  .jumbotron p {
+    color: #d9ccee;
+    max-width: 75%;
+    margin: 1em auto 2em; }
+  .navbar + .jumbotron {
+    margin-top: -20px; }
+  .jumbotron .lang-logo {
+    display: block;
+    background: #B01302;
+    border-radius: 50%;
+    overflow: hidden;
+    width: 100px;
+    height: 100px;
+    margin: auto;
+    border: 2px solid white; }
+    .jumbotron .lang-logo img {
+      max-width: 100%; }
+
+
+h1, h2, h3{
+  font-family: 'Lato', sans-serif;
+}
+
+.hr-size {
+  border-width:4px
+}
+
+
+.avatars {
+  border-radius: 50%;
+  position: absolute;
+  top: 35%;
+}
+
+.avatar {
+  width:128px;
+  margin: 3px;
+  border:7px solid;
+  border-radius: 500px;
+  -webkit-border-radius: 500px;
+  -moz-border-radius: 500px;
+}
+
+.avatar-first {
+  width:140px; /* you can use % */
+  height: auto;
+  top: 25%;
+  transform: translateY(-50%);
+  border-color: gold;
+  position: absolute;
+  z-index: 13;
+  left: 105px;
+}
+
+.avatar-second {
+  width:100px; /* you can use % */
+  height: auto;
+  border-color: silver;
+  position: absolute;
+  /*top: 25%;*/
+  /*transform: translateY(-50%);*/
+  z-index: 2;
+  left: 30px;
+}
+
+.avatar-third  {
+  width:100px; /* you can use % */
+  height: auto;
+  border-color: #eea236;
+  position: absolute;
+  /*top: 25%;*/
+  /*transform: translateY(-50%);*/
+  z-index: 1;
+  left: 220px;
+}
+
+.winner-title {
+  position: absolute;
+  top:400px;
+  left: 150px;
+
+}
+.winner-subtitle  {
+  position: absolute;
+  top:450px;
+  left: 105px;
+}
+
+.home-btn{
+  position: absolute;
+  top: 560px;
+  left: 20px;
+  width: 350px;
+}
