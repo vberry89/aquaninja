@@ -4,11 +4,19 @@ app.use(express.static("frontendnew"));
 var fs = require("fs");
 //var foo = require('/Users/vsk/Desktop/aquaninja/aquaninja/backend/json/users.json');
 var file = "/json/users.json";
+var alexa = "json/alexa.json";
 app.get('/listUsers', function (req, res) {
    fs.readFile( __dirname + file, 'utf8', function (err, data) {
        console.log( data );
        res.end( data );
    });
+})
+app.get('/', function (req, res) {
+    console.log(__dirname);
+    fs.readFile( __dirname + "/frontendnew/index.html", 'utf8', function (err, data) {
+        console.log( data );
+        res.end( data );
+    });
 })
 app.get('/index', function (req, res) {
     console.log(__dirname);
@@ -18,13 +26,13 @@ app.get('/index', function (req, res) {
    });
 })
 app.get('/challenge', function (req, res) {
-   fs.readFile( __dirname + "/frontendnew/water.html", 'utf8', function (err, data) {
+   fs.readFile( __dirname + "/frontendnew/challenge.html", 'utf8', function (err, data) {
        console.log( data );
        res.end( data );
    });
 })
 app.get('/dashboard', function (req, res) {
-   fs.readFile( __dirname + "/frontendnew/review.html", 'utf8', function (err, data) {
+   fs.readFile( __dirname + "/frontendnew/dashboard.html", 'utf8', function (err, data) {
        console.log( data );
        res.end( data );
    });
@@ -34,6 +42,9 @@ app.get('/results', function (req, res) {
        console.log( data );
        res.end( data );
    });
+})
+app.get('/alexa', function (req, res) {
+
 })
 
 
