@@ -1,5 +1,6 @@
 var express = require('express');
 var app = express();
+app.use(express.static("frontendnew"));
 var fs = require("fs");
 //var foo = require('/Users/vsk/Desktop/aquaninja/aquaninja/backend/json/users.json');
 var file = "/json/users.json";
@@ -9,6 +10,33 @@ app.get('/listUsers', function (req, res) {
        res.end( data );
    });
 })
+app.get('/index', function (req, res) {
+    console.log(__dirname);
+    fs.readFile( __dirname + "/frontendnew/index.html", 'utf8', function (err, data) {
+       console.log( data );
+       res.end( data );
+   });
+})
+app.get('/challenge', function (req, res) {
+   fs.readFile( __dirname + "/frontendnew/water.html", 'utf8', function (err, data) {
+       console.log( data );
+       res.end( data );
+   });
+})
+app.get('/dashboard', function (req, res) {
+   fs.readFile( __dirname + "/frontendnew/review.html", 'utf8', function (err, data) {
+       console.log( data );
+       res.end( data );
+   });
+})
+app.get('/results', function (req, res) {
+   fs.readFile( __dirname + "/frontendnew/result.html", 'utf8', function (err, data) {
+       console.log( data );
+       res.end( data );
+   });
+})
+
+
 app.set('port', (process.env.PORT || 5000));
 
 app.get('/:id', function (req, res) {

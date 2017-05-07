@@ -30,6 +30,12 @@ h1, h2, h3{
   font-family: 'Lato', sans-serif;
 }
 
+dummydeclaration { padding-left: 4em; }
+tab{
+
+  padding-left: 15px;
+}
+
 .hr-size {
   border-width:4px
 }
@@ -38,7 +44,7 @@ h1, h2, h3{
 .avatars {
   border-radius: 50%;
   position: absolute;
-  top: 35%;
+  top: 45%;
 }
 
 .avatar {
@@ -53,7 +59,7 @@ h1, h2, h3{
 .avatar-first {
   width:140px; /* you can use % */
   height: auto;
-  top: 25%;
+  top: 35%;
   transform: translateY(-50%);
   border-color: gold;
   position: absolute;
@@ -100,4 +106,42 @@ h1, h2, h3{
   top: 560px;
   left: 20px;
   width: 350px;
+  display: inline-block;
+  border:3px solid #555555;
+  color: #0D0B01;
+  padding: 10px 40px;
+
+  font-family: 'Lato', sans-serif;
+  -webkit-border-radius: 0;
+  -moz-border-radius: 0;
+  margin-bottom: 20px;
+  font-size: 16px;
+}
+
+
+
+.btn-class{
+  display: inline-block;
+  border:3px solid #555555;
+  color: #0D0B01;
+  border-radius: 0;
+  -webkit-border-radius: 0;
+  -moz-border-radius: 0;
+  font-family: 'Lato', sans-serif;
+  font-size: 16px;
+  padding: 10px 40px;
+  box-shadow: inset 0 1px 0 0 #FFF6CE,inset 0 -1px 0 0 #E3C852,inset 0 0 0 1px #FCE88D,0 2px 4px 0 #D4D4D4;
+  -moz-box-shadow: inset 0 1px 0 0 #FFF6CE,inset 0 -1px 0 0 #E3C852,inset 0 0 0 1px #FCE88D,0 2px 4px 0 #D4D4D4;
+  -webkit-box-shadow: inset 0 1px 0 0 #FFF6CE,inset 0 -1px 0 0 #E3C852,inset 0 0 0 1px #FCE88D,0 2px 4px 0 #D4D4D4;
+  text-shadow: 0 1px 0 #FFFFFF;
+  /*background-image: linear-gradient(to top, #FCE374, #FCDF5B);*/
+  background-color: #FFFFFF;
+}
+.btn-class:hover, .btn-class:active{
+  border:3px solid #1b6d85;
+  color: #FFFFFF;
+  box-shadow: inset 0 1px 0 0 #FFF6CE,inset 0 -1px 0 0 #E3C852,inset 0 0 0 1px #FCE88D;
+  -moz-box-shadow: inset 0 1px 0 0 #FFF6CE,inset 0 -1px 0 0 #E3C852,inset 0 0 0 1px #FCE88D;
+  -webkit-box-shadow: inset 0 1px 0 0 #FFF6CE,inset 0 -1px 0 0 #E3C852,inset 0 0 0 1px #FCE88D;
+  background-color: #269abc;
 }

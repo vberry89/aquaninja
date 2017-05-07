@@ -1,82 +1,112 @@
  <!DOCTYPE html>
 <html lang="en">
 <head>
-  <title>Game</title>
+  <title>Aqua Ninja</title>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+  <!--<link rel="stylesheet" href="stylesheets/bootstrap.min.css">-->
+  <link rel="stylesheet" href="stylesheets/main.css">
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.0/jquery.min.js"></script>
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
 </head>
 <body>
-<!-- TODO change src-->
+
+<nav class="navbar navbar-default">
+  <div class="container-fluid">
+    <div class="navbar-header">
+      <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
+        <span class="sr-only">Toggle navigation</span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+      <a class="navbar-brand" href="#">Dashboard</a>
+    </div>
+    <div id="navbar" class="navbar-collapse collapse">
+      <ul class="nav navbar-nav">
+        <li class="active"><a href="#">Home</a></li>
+        <li><a href="#">Challenges</a></li>
+        <li><a href="#">Contact</a></li>
+      </ul>
+
+    </div><!--/.nav-collapse -->
+  </div><!--/.container-fluid -->
+</nav>
+
+
+
+
 <div class="container">
-  <h4>WG Angelhack WaterNinja</p>
-  <small>Spent Water: 123 litres</small> </p>
-  <small>Spent Money: 1.50 Euro</small> 
-  </h4>
-  <div class="list-group" style="margin-top:50px">
-  <div class="container-fluid" style="margin-top:5px">
+  <div class="container-fluid" >
+  <h3>WG Angelhack WaterNinja</p>
+    <small><b>Water:&nbsp;&nbsp;&nbsp;</b>123 litres</small> </p>
+    <small><b>Bill: &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</b>10.50 &euro;</small>
+  </h3>
+  </div> <button type="button" class="btn btn-default btn-block btn-class" style="margin-top:15px;">START CHALLENGE</button>
+
+</div>
+  <div class="list-group" style="margin-top:40px">
+  <div class="container-fluid" >
     <div class="row">
-      <div class="col-xs-6 .col-sm-4">
+      <div class="col-xs-3 .col-sm-2">
         <img class="img-circle" src="img/mario.png" alt="Mario" width="40" height="40">
       </div>
       <div class="col-xs-6 .col-sm-4">
-        <h6>Mario</p>
+        <h4>Mario</p>
         <small>23.3 liter</small>
-        <small>1.50 Euro</small>
+        <small>1.50 &euro;</small>
         <i class="glyphicon glyphicon-triangle-bottom" style="color:red"></i>
-        </h6>
+        </h4>
       </div>
     </div>
   </div> 
   <hr class="hr-size" />
   <div class="container-fluid" style="margin-top:20px">
     <div class="row">
-      <div class="col-xs-6 .col-sm-4">
+      <div class="col-xs-3 .col-sm-2">
         <img class="img-circle" src="img/verena.png" alt="Mario" width="40" height="40">
       </div>
       <div class="col-xs-6 .col-sm-4">
-        <h6>Verena</p>
+        <h4>Verena</p>
         <small>25.3 liter</small>
-        <small>1.70 Euro</small>
+        <small>1.70 &euro;</small>
         <i class="glyphicon glyphicon-triangle-top" style="color:green"></i>
-        </h6>
+        </h4>
       </div>
     </div>
   </div>
     <hr class="hr-size"/>
   <div class="container-fluid" style="margin-top:20px">
     <div class="row">
-      <div class="col-xs-6 .col-sm-4">
+      <div class="col-xs-3 .col-sm-2">
         <img class="img-circle" src="img/ivan1.jpg" alt="Ivan" width="40" height="40">
       </div>
       <div class="col-xs-6 .col-sm-4">
-        <h6>Ivan</p>
+        <h4>Ivan</p>
         <small>30.3 liter</small>
-        <small>2.10 Euro</small>
+        <small>2.10 &euro;</small>
         <i class="glyphicon glyphicon-triangle-bottom" style="color:red"></i>
-        </h6>
+        </h4>
       </div>
     </div>
   </div>
     <hr class="hr-size"/>
   <div class="container-fluid" style="margin-top:20px">
     <div class="row">
-      <div class="col-xs-6 .col-sm-4">
-        <img class="img-circle" src="" alt="Mirco" width="40" height="40">
+      <div class="col-xs-3 .col-sm-2">
+        <img class="img-circle" src="img/mirco.png" alt="Mirco" width="40" height="40">
       </div>
       <div class="col-xs-6 .col-sm-4">
-        <h6>Mirco</p>
+        <h4>Mirco</p>
         <small>56.3 liter</small>
-        <small>3.50 Euro</small>
+        <small>3.50 &euro;</small>
         <i class="glyphicon glyphicon-triangle-top" style="color:green"></i>
-        </h6>
+        </h4>
       </div>
     </div>
   </div>
     <hr class="hr-size"/>
-  </div> <button type="button" class="btn btn-default btn-block" style="margin-top:50px">Start Challenge</button>
 
 </div>
 
