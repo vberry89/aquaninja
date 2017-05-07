@@ -64,7 +64,7 @@ tab{
   border-color: gold;
   position: absolute;
   z-index: 13;
-  left: 95px;
+  left: 80px;
 }
 
 .avatar-second {
@@ -75,7 +75,7 @@ tab{
   /*top: 25%;*/
   /*transform: translateY(-50%);*/
   z-index: 2;
-  left: 20px;
+  left: 5px;
 }
 
 .avatar-third  {
@@ -86,7 +86,7 @@ tab{
   /*top: 25%;*/
   /*transform: translateY(-50%);*/
   z-index: 1;
-  left: 210px;
+  left: 195px;
 }
 
 .winner-title {
