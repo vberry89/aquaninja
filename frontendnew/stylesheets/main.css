@@ -92,25 +92,25 @@ tab{
 .winner-title {
   position: absolute;
   top:400px;
-  left: 150px;
+  left: 120px;
 
 }
 .winner-subtitle  {
   position: absolute;
   top:450px;
-  left: 105px;
+  left: 75px;
 }
 
 .home-btn{
   position: absolute;
   top: 560px;
-  left: 2px;
+  left: 5px;
   width: 95%;
   display: inline-block;
-  border:3px solid #555555;
+  background-color: #FFFFFF;
+  border: 1px solid #4A4A4A;
   color: #0D0B01;
   padding: 10px 40px;
-
   font-family: 'Lato', sans-serif;
   -webkit-border-radius: 0;
   -moz-border-radius: 0;
