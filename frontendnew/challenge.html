@@ -9,7 +9,7 @@
   <meta charset="utf-8">
 
   <meta name="viewport" content="width=device-width, initial-scale=1">
-
+	<link href="https://fonts.googleapis.com/css?family=Lato" rel="stylesheet">
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
   <link href="//netdna.bootstrapcdn.com/bootstrap/3.0.0/css/bootstrap-glyphicons.css" rel="stylesheet">
 
@@ -96,7 +96,7 @@
 
 
 <div id="playerdiv" class="you">  <a href="#" class="btn btn-info btn-lg">
-          <span class="glyphicon glyphicon-triangle-left"></span> you <span class="place">1</span>
+          <span class="glyphicon glyphicon-triangle-left"></span>  <span class="place">1st</span>
         </a></div>
 
 
@@ -106,9 +106,12 @@
       <div class="col-md-12 text-center">
 	
 			<br>
-			<div style="font-weight:bold;"><span id="score">Hello<</span></div>
-		
-			<div id="score2">ello</div>
+		  <hr />
+			<!--<div style="font-weight:bold;">Hello</div>-->
+		  <h2 class="winner-subtitle"> <span id="score"> <b>Mario</b></span> Litres</h2>
+		  <h3 ><span id="score2"> <b>Mario</b></span> &euro;</h3>
+
+			<!--<div id="score2">ello</div>-->
 		
 		</div>
 	</div>
@@ -134,6 +137,8 @@
 
   </div>
 </div>
+
+
 </body>
 
 </html>
@@ -149,7 +154,7 @@ body {
 }
 .player1 {
 	position:fixed;
-	width:100px;
+	width:80px;
 	height:50px;
 	background-image:url("https://aquaninja.herokuapp.com/img/mario.png");
 	background-size: 50px 50px;
@@ -157,14 +162,12 @@ background-repeat:no-repeat;
 text-align:right;
 vertical-align:middle;
 
-
 }
 .player2 {
 	position:fixed;
-	width:100px;
+	width:80px;
 	height:50px;
 	text-align:right;vertical-align:middle;
-	
 	background-repeat:no-repeat;
 	background-image:url("https://aquaninja.herokuapp.com/img/verena.png");
 	background-size: 50px 50px;
@@ -172,13 +175,12 @@ vertical-align:middle;
 }
 .player3 {
 	position:fixed;
-	width:100px;
+	width:80px;
 	height:50px;
 	background-image:url("https://aquaninja.herokuapp.com/img/mirco.png");
 	background-size: 50px 50px;
 	background-repeat:no-repeat;
 	text-align:right;vertical-align:middle;
-
 }
 .you {
 	background-color:#40a4df;
@@ -231,11 +233,11 @@ vertical-align:middle;
     //      console.log(Math.ceil(counter.var));
 		  if (over_first == false && counter.var > over_first_number) {
 			over_first = true;
-			$(".you .place").html("2");
+			$(".you .place").html("2nd");
 		  }
 		   if (over_first == true && over_second == false && counter.var > over_second_number) {
 			over_second = true;
-			$(".you .place").html("3");
+			$(".you .place").html("3rd");
 		  }
 		   if (over_first == true && over_second == true && over_third == false && counter.var > over_third_number) {
 			over_third = true;
@@ -251,7 +253,8 @@ vertical-align:middle;
 			//document.location.href = "https://aquaninja.herokuapp.com/results";
 			myVar = setTimeout(redir, 8000);
 		  }
-          $("#score").html(counter.var);
+          $("#score").html((counter.var).toFixed(2));
+          $("#score2").html((counter.var * 0.0167).toFixed(2));
       },
       ease:Circ.easeOut
   });
