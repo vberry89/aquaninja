@@ -49,6 +49,7 @@ tab{
 
 .avatar {
   width:128px;
+  height: 128px;
   margin: 3px;
   border:7px solid;
   border-radius: 500px;
@@ -69,7 +70,7 @@ tab{
 
 .avatar-second {
   width:100px; /* you can use % */
-  height: auto;
+  height: 100px;
   border-color: silver;
   position: absolute;
   /*top: 25%;*/
@@ -80,7 +81,7 @@ tab{
 
 .avatar-third  {
   width:100px; /* you can use % */
-  height: auto;
+  height: 100px;
   border-color: #eea236;
   position: absolute;
   /*top: 25%;*/
@@ -98,7 +99,7 @@ tab{
 .winner-subtitle  {
   position: absolute;
   top:450px;
-  left: 75px;
+  left: 95px;
 }
 
 .home-btn{
